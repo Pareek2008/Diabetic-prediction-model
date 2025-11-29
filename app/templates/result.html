@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="result-container">
+            <h2>📊 Prediction Result</h2>
+            
+            {% if result == 1 %}
+                <div class="result-message result-positive">
+                    <strong>⚠️ Warning</strong><br>
+                    You are likely to have diabetes.
+                </div>
+                <p style="color: #666; margin-top: 15px;">
+                    Please consult with a healthcare provider for proper diagnosis and treatment.
+                </p>
+            {% else %}
+                <div class="result-message result-negative">
+                    <strong>✅ Good News</strong><br>
+                    You are unlikely to have diabetes.
+                </div>
+                <p style="color: #666; margin-top: 15px;">
+                    Continue maintaining a healthy lifestyle and regular check-ups.
+                </p>
+            {% endif %}
+            
+            <a href="/" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
