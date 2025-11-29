@@ -116,7 +116,7 @@ This project is open source and available under the MIT License.
 
 ## Author
 
-Created as a machine learning demonstration project.
+Keshav Pareek
 
 ---
 
